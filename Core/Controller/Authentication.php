@@ -72,6 +72,8 @@ die;
                         'username' => $logged_in_user->username,
                         'display_name' => $logged_in_user->display_name,
                         'user_id' => $logged_in_user->id,
+                        'email' => $logged_in_user->email,
+                        'file_name' => $logged_in_user->file_name,
                         'is_admin_view' => true
                 );
 
