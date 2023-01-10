@@ -43,6 +43,7 @@ class Endpoints extends Controller
         /**
          * create new trasnactions
          *
+         * @return void
          * 
          */        function transactions_create()
         {
@@ -63,7 +64,7 @@ class Endpoints extends Controller
         /**
          * update quantity in the selected trasnactions
          *
-         * 
+         * @return void
          */
         public function transactions_update()
         {
@@ -90,7 +91,7 @@ class Endpoints extends Controller
         /**
          * editing on the quantity to the selected trasnactions
          *
-         * 
+         * @return void
          */
         public function transactions_edit()
         {
@@ -128,7 +129,7 @@ class Endpoints extends Controller
         /**
          * delete transaction add return the selected quantity
          *
-         * 
+         * @return void
          */
         public function transactions_delete()
         {
