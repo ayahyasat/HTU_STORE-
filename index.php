@@ -24,7 +24,9 @@ if (isset($_COOKIE['user_id']) && !isset($_SESSION['user'])) { // check if there
     $_SESSION['user'] = array( // set up the user session that idecates that the user is logged in. 
         'username' => $logged_in_user->username,
         'display_name' => $logged_in_user->display_name,
+        'email' => $logged_in_user->email,
         'user_id' => $logged_in_user->id,
+        "file_name"=> $logged_in_user->file_name,
         'is_admin_view' => true
     );
 }
@@ -42,6 +44,7 @@ Router::post('/authenticate', "authentication.validate"); // Displays the login 
 
 // athenticated
 Router::get('/dashboard', "admin.index"); // Displays the admin dashboard
+Router::get('/profile', "admin.single"); // Displays the admin dashboard
 
 // athenticated + permissions [item:read]
 Router::get('/items', "items.index"); // list of items (HTML)
