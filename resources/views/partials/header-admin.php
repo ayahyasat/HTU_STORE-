@@ -74,12 +74,17 @@ use Core\Helpers\Helper; ?>
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/dashboard">HTU Store</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+      <a class="nav-link" href="/profile">Profile</a>
+
         <li class="nav-item">
           <a class="nav-link" href="/logout">Logout</a>
         </li>
       </ul>
       <div class="d-flex flex-row gap-3">
+      </div>
+      <div class="d-flex flex-row gap-3">
+        
         <img src="https://www.htu.edu.jo/images/HTU%20Logo200.png" width="40px" height="40px" id="image" class="d-inline-block align-top " alt="">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
