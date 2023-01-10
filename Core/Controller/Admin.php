@@ -55,4 +55,21 @@ class Admin extends Controller
                 $this->data['top_price'] = $price->order_by_price();
 
         }
+
+
+
+
+
+        public function single()
+        {
+                
+                $this->view = 'profile';
+                $user = new User; // new model post.
+                $this->data['users'] = $user->get_all();
+
+        }
+
+
+
+
 }
