@@ -37,6 +37,7 @@
 <button id="edit_transaction" type="submit" class="btn btn-warning mt-4">Update</button>
 </div>
 </div>
+</div>
 </form>
 </div>
 </div>

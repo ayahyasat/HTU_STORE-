@@ -14,7 +14,6 @@
 <div class="wrapper rounded">
     <nav class="navbar navbar-expand-lg navbar-dark dark d-lg-flex align-items-lg-start"> <a class="navbar-brand">Edit Transaction</a>
     </nav>
-
     <div class="table-responsive mt-3">
         <table class="table table-dark table-borderless" id="table">
     
@@ -35,6 +34,7 @@
 <div class="mb-3 d-flex gap-3">
 
 <button id="edit_transaction" type="submit" class="btn btn-warning mt-4">Update</button>
+</div>
 </div>
 </div>
 </form>

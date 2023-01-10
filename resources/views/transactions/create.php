@@ -110,12 +110,11 @@
                 <td class="text-center text-light"><?=$transaction['total_sales']?></td>
                 <td ><button class=" bg-dark text-light border-0"  onclick="location.href='/sellings/edit_s?id=<?= $transaction['id']?>'">
                 <i class="fa-sharp fa-solid fa-pen-to-square"></i></button></td>
-                
                 <td>
-                  <button class=" bg-dark text-light border-0" onclick="delete_transaction()"   
-                  transaction_id="<?= $transaction['id']?>"
-                  quantity_item="<?= $transaction['item_quantity']?>"
-                  id_item="<?= $transaction['item_id']?>">   
+                <input type="hidden" id="transaction_id" name="transaction_id" value="<?= $transaction['id']?>">
+                <input type="hidden" id="quantity_item" name="quantity_item" value="<?= $transaction['item_quantity']?>">
+                <input type="hidden" id="id_item" name="id_item" value="<?=$transaction['item_id']?>">
+                  <button class=" bg-dark text-light border-0" onclick="delete_transaction()" >   
                 <i class="fa-sharp fa-solid fa-trash"></i></button></td>
             </tr>
           <?php endforeach; ?> 
@@ -190,12 +189,12 @@ $('#create-transaction').click(function(e) {
     });
    
     
-      function delete_transaction(){
+      function delete_transaction(e){
             $.ajax({
              type: "POST",
              url: "http://capstone-project.local/api/transactions/delete",
              data: JSON.stringify({
-              id_item : $('#item_id').val(),
+              id_item : $('#id_item').val(),
               quantity_item: $('#quantity_item').val(),
               transaction_id : $('#transaction_id').val(),
                })
@@ -203,6 +202,7 @@ $('#create-transaction').click(function(e) {
                ,
             success: function(response) {
               alert('delete quantity done')
+              location.reload()
                 
             },
             error: function(e) {
